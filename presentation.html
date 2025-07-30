@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>智慧仓库管理系统演示文稿</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Inter', 'Noto Sans SC', 'Noto Sans JP', sans-serif; 
+      background-color: #f0f2f5; /* 更柔和的背景色 */
+    }
+    .slide { 
+      display: none; 
+      height: 85vh; 
+      overflow-y: auto; 
+      padding: 2rem 4rem; /* 增加内边距 */
+      background-color: white;
+      border-radius: 0.5rem;
+      flex-direction: column;
+    }
+    .slide.active { 
+      display: flex; 
+    }
+    .lang-ja { font-family: 'Noto Sans JP', sans-serif; }
+    /* 自定义一些颜色和样式 */
+    .brand-text { color: #2563eb; } /* 品牌蓝色 */
+    .brand-bg { background-color: #2563eb; }
+    .placeholder {
+      border: 2px dashed #d1d5db;
+      background-color: #f9fafb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #9ca3af;
+      font-size: 1rem;
+      min-height: 200px;
+      width: 100%;
+      border-radius: 0.5rem;
+      overflow: hidden; /* Ensure images fit */
+    }
+    .placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .text-eng {
+      color: #6b7280; /* English text color */
+      font-size: 0.9em;
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+
+  <div id="presentation" class="w-full max-w-6xl bg-white shadow-2xl rounded-lg overflow-hidden">
+    <!-- Slide 1: 封面页 -->
+    <div class="slide active justify-center items-center text-center bg-gray-800 text-white" data-slide="1">
+      <h1 class="text-5xl font-bold lang-ja">スマートな倉庫管理、その手に</h1>
+      <p class="text-eng text-2xl mt-2">Smart Warehouse Management, At Your Fingertips</p>
+      <h2 class="text-3xl mt-12 lang-ja">中小企業のためのAI搭載倉庫管理パートナー</h2>
+      <p class="text-eng text-xl">The AI-Powered Warehouse Partner for SMEs</p>
+      <div class="mt-16 text-lg text-gray-300">
+        <p><span class="lang-ja">発表者:</span> 厲 晨皓/ <span class="text-eng">Presenter:</span> LI CHENHAO</p>
+        <p><span class="lang-ja">日付:</span> 2025年7月31日 / <span class="text-eng">Date:</span>July 31, 2025</p>
+        <p class="mt-2 text-lg text-gray-300">Supervisor: Simona Vasilache</p>
+      </div>
+    </div>
+
+    <!-- Slide 2: 市场的冰火两重天 -->
+    <div class="slide" data-slide="2">
+      <div class="text-4xl font-bold text-center mb-8"><span class="lang-ja">市場の<span class="brand-text">二極化</span></span><p class="text-eng">A Tale of Two Markets</p></div>
+      <div class="text-xl text-center text-gray-700 max-w-3xl mx-auto mb-8">
+        <span class="lang-ja">私たちが解決しようとしている問題を理解するために、まず倉庫管理の現状を見てみましょう。</span>
+        <p class="text-eng">To understand the problem we are solving, let's first look at the current state of warehouse management.</p>
+      </div>
+      <div class="flex-grow flex items-center justify-around space-x-8">
+        <div class="w-1/2 text-center">
+          <div class="text-2xl font-semibold mb-4"><span class="lang-ja">大企業: 「象」</span><p class="text-eng">Large Enterprises: "The Elephants"</p></div>
+          <!-- <div class="placeholder">[图片: 现代化、自动化的“大象”仓库]</div> -->
+      <img
+        src="elephant-warehouse.jpg"
+        alt="大企業现代化仓库示意／Modern automated warehouse"
+        class="mx-auto max-w-full h-auto mb-4 max-h-48 object-cover rounded-lg"
+      />
+          <div class="mt-4 text-lg"><span class="lang-ja">AI予測、ロボットピッキング、データ駆動</span><p class="text-eng">AI forecasting, robotic picking, data-driven</p></div>
+        </div>
+        <div class="w-1/2 text-center">
+          <div class="text-2xl font-semibold mb-4"><span class="lang-ja">中小企業: 「蟻」</span><p class="text-eng">SMEs: "The Ants"</p></div>
+          <!-- <div class="placeholder">[图片: 杂乱、人工的“蚂蚁”仓库]</div> -->
+      <img
+        src="ant-warehouse.jpg"
+        alt="中小企業纯手工仓库示意／Hand-made SME warehouse"
+        class="mx-auto max-w-full h-auto mb-4 max-h-48 object-cover rounded-lg"
+      />
+          <div class="mt-4 text-lg"><span class="lang-ja">手書き台帳、人手による探索、経験依存</span><p class="text-eng">Manual ledgers, manual searching, experience-based</p></div>
+        </div>
+      </div>
+      <div class="text-center text-xl font-bold mt-8 text-red-600"><span class="lang-ja">巨大な格差！</span><p class="text-eng">A Massive Divide!</p></div>
+    </div>
+
+    
+    <!-- Slide 3: 为什么“蚂蚁”难以跨越鸿沟？ -->
+    <div class="slide" data-slide="3">
+      <div class="text-4xl font-bold text-center mb-6"><span class="lang-ja">なぜ「蟻」は<span class="brand-text">格差</span>を越えられないのか？</span><p class="text-eng">Why Can't "The Ants" Cross the Divide?</p></div>
+      
+      <div class="text-xl text-center text-gray-700 max-w-3xl mx-auto mb-10">
+        <span class="lang-ja">これらの課題は高い参入障壁となり、最新の管理ツールの導入を妨げています。</span>
+        <p class="text-eng">These challenges create a high barrier to entry, preventing them from adopting modern management tools.</p>
+      </div>
+
+      <div class="flex-grow flex items-center justify-around text-center space-x-4">
+        <div class="w-1/3">
+          <div class="placeholder text-6xl p-8"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-24 h-24 mx-auto text-amber-500"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.826-1.106-2.303 0-3.128C10.444 7.54 11.218 7.5 12 7.5c.748 0 1.45.22 2.003.659l.879.659m0 0c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C18.464 4.219 17.768 4 17 4c-.748 0-1.45.22-2.003.659l-.879.659m-8.002 8.002c-1.171.879-3.07.879-4.242 0-1.172-.879-1.172-2.303 0-3.182C4.536 8.219 5.232 8 6 8c.748 0 1.45.22 2.003.659l.879.659" /></svg></div>
+          <div class="text-2xl font-bold mt-4"><span class="lang-ja">資金不足 (高コスト)</span><p class="text-eng">Lack of Funds (High Cost)</p></div>
+          <div class="mt-2 text-gray-600 px-2">
+            <span class="lang-ja">高価なスキャナーやサーバーの初期投資に加え、継続的なメンテナンス費用も大きな負担となります。</span>
+            <p class="text-eng">Beyond the initial investment in pricey scanners and servers, ongoing maintenance costs pose a significant burden.</p>
+          </div>
+        </div>
+        <div class="w-1/3">
+          <div class="placeholder text-6xl p-8"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-24 h-24 mx-auto text-sky-500"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /></svg></div>
+          <div class="text-2xl font-bold mt-4"><span class="lang-ja">人材不足 (技術障壁)</span><p class="text-eng">Lack of People (Tech Barrier)</p></div>
+          <div class="mt-2 text-gray-600 px-2">
+            <span class="lang-ja">IT専門家を雇用し、維持することは、テクノロジーを本業としない企業にとって非常に困難です。</span>
+            <p class="text-eng">Hiring and retaining IT specialists is extremely difficult for companies whose core business is not technology.</p>
+          </div>
+        </div>
+        <div class="w-1/3">
+          <div class="placeholder text-6xl p-8"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-24 h-24 mx-auto text-red-500"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" /></svg></div>
+          <div class="text-2xl font-bold mt-4"><span class="lang-ja">導入の煩雑さ</span><p class="text-eng">Implementation Complexity</p></div>
+          <div class="mt-2 text-gray-600 px-2">
+            <span class="lang-ja">複雑なシステムは長い研修期間を必要とし、日々の業務に影響を与え、従業員の抵抗感を生むことがあります。</span>
+            <p class="text-eng">Complex systems require long training periods, impacting daily operations and sometimes creating resistance from employees.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: 我们的使命 -->
+    <div class="slide justify-center items-center text-center" data-slide="4">
+      <div class="text-4xl font-bold"><span class="lang-ja">私たちの目標</span><p class="text-eng">Our Goal</p></div>
+      <div class="text-2xl mt-6 max-w-4xl mx-auto"><span class="lang-ja">この格差を打破し、<span class="brand-text font-bold">軽量、強力、誰もが使える</span>ソリューションを提供し、すべての中小企業が自社の「デジタル武器」を持てるようにします。</span><p class="text-eng">To break this divide by providing a <span class="brand-text font-bold">lightweight, powerful, and accessible</span> solution, empowering every small business with its own "digital weapon".</p></div>
+    </div>
+
+    <!-- Slide 5: 核心武器 -->
+    <div class="slide" data-slide="5">
+      <div class="text-4xl font-bold text-center mb-8"><span class="lang-ja">中核となる武器：<span class="brand-text">高価なスキャナは不要</span>、あなたのスマホが効率化の神器に！</span><p class="text-eng">Core Weapon: <span class="brand-text">Forget Scanners</span>, Your Phone is Your Efficiency Tool!</p></div>
+      <div class="flex-grow flex items-center justify-center">
+        <!-- <div class="placeholder w-3/4 h-3/4">[主视觉图: 一只手拿着智能手机，屏幕上是你的App，正在扫描货品二维码]</div> -->
+         <img
+  src="slide5-main-visual.png"
+  alt="一只手拿着智能手机，屏幕上展示网页项目正在扫描货品二维码／A hand holding a smartphone scanning a product QR code with a warehouse management web app"
+  class="mx-auto max-w-full h-auto mb-4 max-h-64 object-cover rounded-lg"
+/>
+      </div>
+      <div class="text-center text-xl font-bold mt-4"><span class="lang-ja">革命的な理念：「ゼロハードウェアコスト」</span><p class="text-eng">Revolutionary Concept: "Zero Hardware Cost"</p></div>
+    </div>
+
+    <!-- Slide 6: 核心功能展示 -->
+<div class="slide" data-slide="6">
+  <div class="text-4xl font-bold text-center mb-8">
+    <span class="lang-ja">スマホ一つで、<span class="brand-text">倉庫を掌握</span></span>
+    <p class="text-eng">Warehouse in Hand, with Just a Phone</p>
+  </div>
+  <div class="flex-grow grid grid-cols-2 gap-x-8 gap-y-6 items-center">
+    <!-- 扫码入库 -->
+    <div class="text-center">
+      <img
+        src="slide6_inbound.png"
+        alt="扫描入库／Scan for Inbound"
+        class="mx-auto max-w-full h-auto max-h-40 object-cover rounded-lg"
+      />
+      <div class="text-xl font-bold mt-2">
+        <span class="lang-ja">スキャン入庫</span>
+        <p class="text-eng">Scan for Inbound</p>
+      </div>
+    </div>
+    <!-- 移动盘点 -->
+    <div class="text-center">
+      <img
+        src="slide6_stocktaking.png"
+        alt="移动盘点／Mobile Stocktaking"
+        class="mx-auto max-w-full h-auto max-h-40 object-cover rounded-lg"
+      />
+      <div class="text-xl font-bold mt-2">
+        <span class="lang-ja">モバイル棚卸</span>
+        <p class="text-eng">Mobile Stocktaking</p>
+      </div>
+    </div>
+    <!-- 扫码出库 -->
+    <div class="text-center">
+      <img
+        src="slide6_outbound.png"
+        alt="扫码出库／Scan for Outbound"
+        class="mx-auto max-w-full h-auto max-h-40 object-cover rounded-lg"
+      />
+      <div class="text-xl font-bold mt-2">
+        <span class="lang-ja">スキャン出庫</span>
+        <p class="text-eng">Scan for Outbound</p>
+      </div>
+    </div>
+    <!-- 随时查询 -->
+    <div class="text-center">
+      <img
+        src="slide6_inquiry.png"
+        alt="实时查询／Real-time Inquiry"
+        class="mx-auto max-w-full h-auto max-h-40 object-cover rounded-lg"
+      />
+      <div class="text-xl font-bold mt-2">
+        <span class="lang-ja">いつでも在庫照会</span>
+        <p class="text-eng">Real-time Inquiry</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <!-- Slide 7: 核心亮点 -->
+<div class="slide" data-slide="7">
+  <div class="text-4xl font-bold text-center mb-8">
+    <span class="lang-ja">ユニークな<span class="brand-text">コア機能</span></span>
+    <p class="text-eng">Unique Core Features</p>
+  </div>
+  <div class="flex-grow flex items-center justify-around space-x-8">
+    <!-- 左侧：Custom Label Design（保持不变） -->
+    <div class="w-1/2 text-center">
+      <div class="text-2xl font-semibold mb-4">
+        <span class="lang-ja">カスタムラベルデザイン</span>
+        <p class="text-eng">Custom Label Design</p>
+      </div>
+      <div class="placeholder">
+        <img
+          src="slide7_custom_label.png"
+          alt="可视化标签编辑器界面／Visual Label Design Editor"
+          class="mx-auto max-w-full h-auto"
+        />
+      </div>
+      <div class="mt-4 text-lg">
+        <span class="lang-ja">商品ごとにユニークなラベルを自由にデザイン。ドラッグ＆ドロップで簡単操作。</span>
+        <p class="text-eng">Freely design unique labels for each product. Simple drag-and-drop interface.</p>
+      </div>
+    </div>
+
+    <!-- 右侧：AI-Powered Smart Analytics（调整后） -->
+    <div class="w-1/2 text-center">
+      <div class="text-2xl font-semibold mb-4">
+        <span class="lang-ja">AIによるスマート分析</span>
+        <p class="text-eng">AI-Powered Smart Analytics</p>
+      </div>
+      <div class="placeholder">
+        <img
+          src="slide7_ai_analytics.png"
+          alt="AI分析仪表盘，包含图表和建议／AI analytics dashboard with charts and recommendations"
+          class="mx-auto max-w-full h-auto"
+        />
+      </div>
+      <div class="mt-4 text-lg">
+        <span class="lang-ja">AIが販売データを分析し、「人気商品」や「滞留在庫」を特定。ビジネス判断をサポート。</span>
+        <p class="text-eng">AI analyzes sales data to identify "hot sellers" and "slow-moving stock" to support business decisions.</p>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- NEW Slide 8: 学术创新性 I -->
+    <div class="slide" data-slide="8">
+      <div class="text-4xl font-bold text-center mb-8"><span class="lang-ja">学術的・産業的<span class="brand-text">革新性 I</span></span><p class="text-eng">Academic & Industrial Innovations I</p></div>
+      <div class="flex-grow flex items-center justify-center space-x-8">
+          <div class="w-1/2 bg-gray-50 p-6 rounded-lg shadow-md h-full">
+              <h3 class="text-2xl font-bold mb-4"><span class="lang-ja">ゼロコスト・モバイル端末活用</span><p class="text-eng">Zero-Cost Mobile-as-Terminal</p></h3>
+              <p class="text-lg text-gray-700"><span class="lang-ja">高価な業務用端末の代わりにスマートフォンを活用することで、中小企業の導入障壁を劇的に下げます。これは、資源制約のある環境における「軽量システム」設計原則や、「エッジコンピューティング」とクラウドの連携という最新の研究トレンドにも合致します。</span></p>
+              <p class="text-eng mt-2 text-gray-600">This dramatically lowers the entry barrier for SMEs by leveraging smartphones instead of costly industrial terminals. It aligns with the "lightweight systems" design principle for resource-constrained environments and contributes to the research trend of edge computing and cloud synergy.</p>
+          </div>
+          <div class="w-1/2 bg-gray-50 p-6 rounded-lg shadow-md h-full">
+              <h3 class="text-2xl font-bold mb-4"><span class="lang-ja">中小企業向けAIの民主化</span><p class="text-eng">Democratizing AI for SMEs</p></h3>
+              <p class="text-lg text-gray-700"><span class="lang-ja">従来、大企業の特権であった高度なAI/MLモデル（需要予測、欠品警告など）を、ITインフラが不十分な中小企業でも利用可能にします。これにより、「中小企業のためのAI」という重要な学術的空白を埋めることを目指します。</span></p>
+              <p class="text-eng mt-2 text-gray-600">We aim to fill a significant academic gap—"AI for SMEs"—by making advanced AI/ML models (for demand forecasting, stockout alerts, etc.), traditionally exclusive to large corporations, accessible to SMEs with limited IT infrastructure.</p>
+          </div>
+      </div>
+  </div>
+
+   <!-- NEW Slide 9: 学术创新性 II -->
+   <div class="slide" data-slide="9">
+    <div class="text-4xl font-bold text-center mb-8"><span class="lang-ja">学術的・産業的<span class="brand-text">革新性 II</span></span><p class="text-eng">Academic & Industrial Innovations II</p></div>
+    <div class="flex-grow flex items-center justify-center space-x-8">
+        <div class="w-1/2 bg-gray-50 p-6 rounded-lg shadow-md h-full">
+            <h3 class="text-2xl font-bold mb-4"><span class="lang-ja">アジャイルなデータループ</span><p class="text-eng">Agile Data Feedback Loop</p></h3>
+            <p class="text-lg text-gray-700"><span class="lang-ja">中小企業は、大企業と異なり、市場の変化に迅速に対応できる柔軟性を持っています。「モバイル＋クラウド＋AI」の連携は、リアルタイムのデータに基づいた迅速な生産・在庫調整を可能にし、「アジャイル生産」や「リアルタイム最適化」の理論を実践するユニークな機会を提供します。</span></p>
+            <p class="text-eng mt-2 text-gray-600">Unlike large corporations, SMEs can adapt quickly. Our "Mobile + Cloud + AI" synergy creates a real-time data feedback loop, enabling rapid production and inventory adjustments. This provides a unique opportunity to apply academic theories of "agile manufacturing" and "real-time optimization" in practice.</p>
+        </div>
+        <div class="w-1/2 bg-gray-50 p-6 rounded-lg shadow-md h-full">
+            <h3 class="text-2xl font-bold mb-4"><span class="lang-ja">モジュール式アーキテクチャ</span><p class="text-eng">Modular Architecture</p></h3>
+            <p class="text-lg text-gray-700"><span class="lang-ja">フロントエンド、バックエンド、AIサービスを分離したマイクロサービス設計は、現代のソフトウェア工学のベストプラクティスです。これにより、将来的にサプライチェーン連携や動的価格設定といった新しい機能を、プラグインのように簡単に追加・検証するための堅牢な研究基盤を構築します。</span></p>
+            <p class="text-eng mt-2 text-gray-600">Our decoupled microservices architecture follows modern software engineering best practices. This creates a robust research platform for the future, allowing new functionalities like supply chain collaboration or dynamic pricing to be integrated and tested as plug-and-play modules.</p>
+        </div>
+    </div>
+</div>
+
+   <!-- Slide 8: 技术支撑 -->
+<div class="slide" data-slide="9">
+  <div class="text-4xl font-bold text-center mb-8">
+    <span class="lang-ja">
+      手軽さの裏側：<span class="brand-text">信頼性の高い技術サポート</span>
+    </span>
+    <p class="text-eng">
+      Behind the Simplicity: Reliable Technology
+    </p>
+  </div>
+  <div class="flex-grow flex items-center justify-center">
+    <!-- 替换下面这行 -->
+    <img
+      src="slide9_tech_stack.png"
+      alt="技术架构图：Frontend → Backend → AI Service／Tech stack: Frontend → Backend → AI Service"
+      class="mx-auto max-w-full h-auto"
+    />
+  </div>
+  <div class="text-center text-lg mt-4">
+    <span class="lang-ja">
+      モバイルでの快適な体験を実現するための技術的最適化（スキャンアルゴリズム、クラウド同期など）
+    </span>
+    <p class="text-eng">
+      Technical optimizations for a smooth mobile experience (e.g., scanning algorithms, cloud sync)
+    </p>
+  </div>
+</div>
+
+ <!-- NEW Slide 9: データが語る -->
+    <div class="slide" data-slide="9">
+      <div class="text-4xl font-bold text-center mb-6">
+        <span class="lang-ja">データが語る：<span class="brand-text">期待される成果</span></span>
+        <p class="text-eng">Data Speaks: Expected Outcomes</p>
+      </div>
+      <div class="text-lg text-center text-gray-600 max-w-4xl mx-auto mb-8">
+        <span class="lang-ja">私たちのソリューションは、業界の調査研究によってその効果が裏付けられています。</span>
+        <p class="text-eng">The effectiveness of our solution is supported by industry research and studies.</p>
+      </div>
+      <div class="flex-grow flex items-start justify-around text-left space-x-6">
+        <!-- Column 1: Cost Reduction -->
+        <div class="w-1/3 bg-gray-50 p-6 rounded-lg shadow-md h-full">
+          <h3 class="text-2xl font-bold mb-4 text-green-700">
+            <span class="lang-ja">コスト削減</span><p class="text-eng">Cost Reduction</p>
+          </h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-green-500 mr-3 mt-1">✔</span>
+              <div>
+                <strong class="lang-ja">在庫コストを最大5%削減</strong>
+                <p class="text-eng text-sm">Up to 5% reduction in inventory costs.</p>
+                <p class="text-xs text-gray-400 mt-1">(McKinsey; European Economic Letters)</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Column 2: Efficiency Gains -->
+        <div class="w-1/3 bg-gray-50 p-6 rounded-lg shadow-md h-full">
+          <h3 class="text-2xl font-bold mb-4 text-blue-700">
+            <span class="lang-ja">効率と売上の向上</span><p class="text-eng">Efficiency & Sales Boost</p>
+          </h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-3 mt-1">✔</span>
+              <div>
+                <strong class="lang-ja">売上2-3%向上</strong>
+                <p class="text-eng text-sm">2-3% increase in incremental sales.</p>
+                <p class="text-xs text-gray-400 mt-1">(McKinsey)</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-3 mt-1">✔</span>
+              <div>
+                <strong class="lang-ja">在庫回転率18%向上</strong>
+                <p class="text-eng text-sm">18% improvement in inventory turnover.</p>
+                <p class="text-xs text-gray-400 mt-1">(European Economic Letters)</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Column 3: Accuracy & Service -->
+        <div class="w-1/3 bg-gray-50 p-6 rounded-lg shadow-md h-full">
+          <h3 class="text-2xl font-bold mb-4 text-purple-700">
+            <span class="lang-ja">予測精度とサービス</span><p class="text-eng">Accuracy & Service</p>
+          </h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-purple-500 mr-3 mt-1">✔</span>
+              <div>
+                <strong class="lang-ja">予測誤差を20-50%削減</strong>
+                <p class="text-eng text-sm">20-50% reduction in prediction errors.</p>
+                <p class="text-xs text-gray-400 mt-1">(McKinsey)</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-purple-500 mr-3 mt-1">✔</span>
+              <div>
+                <strong class="lang-ja">欠品率28%改善</strong>
+                <p class="text-eng text-sm">28% improvement in stockout rates.</p>
+                <p class="text-xs text-gray-400 mt-1">(European Economic Letters)</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 10: 我们的愿景 -->
+    <div class="slide" data-slide="11">
+      <div class="text-4xl font-bold text-center mb-8"><span class="lang-ja">私たちのビジョン：「一つの武器」から<span class="brand-text">「エコシステム」</span>へ</span><p class="text-eng">Our Vision: From a "Single Weapon" to an "Ecosystem"</p></div>
+      <div class="flex-grow flex items-center justify-center">
+        <!-- <div class="placeholder w-3/4 h-3/4">[Roadmap或生态系统图]</div> -->
+         <img
+  src="slide11_roadmap.png"
+  alt="短期: 機能改善／Feature Enhancement, 中期: データ連携／Data Integration, 長期: サプライチェーンのデータハブへ／Become a Supply Chain Data Hub"
+  class="mx-auto max-w-full h-auto"
+/>
+      </div>
+      <div class="text-center text-lg mt-4"><span class="lang-ja">短期: 機能改善 → 中期: データ連携 → 長期: サプライチェーンのデータハブへ</span><p class="text-eng">Short-term: Enhance Features → Mid-term: Data Integration → Long-term: Become a Supply Chain Data Hub</p></div>
+    </div>
+
+    <!-- Slide 11: Q&A -->
+    <div class="slide justify-center items-center text-center bg-gray-800 text-white" data-slide="12">
+      <h2 class="text-6xl font-bold">Q & A</h2>
+      <p class="mt-4 text-2xl lang-ja">質疑応答</p>
+    </div>
+
+    <!-- Slide 12: 感谢页 -->
+    <div class="slide justify-center items-center text-center bg-gray-800 text-white" data-slide="13">
+      <h2 class="text-5xl font-bold lang-ja">ご清聴ありがとうございました</h2>
+      <p class="text-eng text-2xl mt-2">Thank you for your attention</p>
+      <div class="text-xl mt-8 opacity-80"><span class="lang-ja">連絡先：cli@iplab.cs.tsukuba.ac.jp</span> / <span class="text-eng">Contact:cli@iplab.cs.tsukuba.ac.jpcli@iplab.cs.tsukuba.ac.jp</span></div>
+    </div>
+
+  </div>
+
+  <!-- Navigation -->
+  <div class="mt-6 flex justify-center items-center space-x-4">
+    <button id="prevBtn" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+      ←
+    </button>
+    <span id="slide-counter" class="text-gray-700 font-semibold text-lg">1 / 13</span>
+    <button id="nextBtn" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-lg transition-colors">
+      →
+    </button>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const counter = document.getElementById('slide-counter');
+    let currentSlideIndex = 0;
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      // 隐藏所有幻灯片
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+      
+      // 显示当前索引的幻灯片
+      slides[index].classList.add('active');
+      
+      // 更新计数器
+      counter.textContent = `${index + 1} / ${totalSlides}`;
+      
+      // 更新按钮状态
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === totalSlides - 1;
+    }
+
+    // 按钮点击事件
+    prevBtn.addEventListener('click', () => {
+      if (currentSlideIndex > 0) {
+        currentSlideIndex--;
+        showSlide(currentSlideIndex);
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentSlideIndex < totalSlides - 1) {
+        currentSlideIndex++;
+        showSlide(currentSlideIndex);
+      }
+    });
+
+    // 键盘左右箭头事件
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') {
+        prevBtn.click();
+      } else if (e.key === 'ArrowRight') {
+        nextBtn.click();
+      }
+    });
+
+    // 初始显示第一张幻灯片
+    showSlide(currentSlideIndex);
+  </script>
+
+</body>
+</html>
