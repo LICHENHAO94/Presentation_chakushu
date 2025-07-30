@@ -9,13 +9,13 @@
   <style>
     body { 
       font-family: 'Inter', 'Noto Sans SC', 'Noto Sans JP', sans-serif; 
-      background-color: #f0f2f5; /* 更柔和的背景色 */
+      background-color: #f0f2f5;
     }
     .slide { 
       display: none; 
       height: 85vh; 
       overflow-y: auto; 
-      padding: 2rem 4rem; /* 增加内边距 */
+      padding: 2rem 4rem;
       background-color: white;
       border-radius: 0.5rem;
       flex-direction: column;
@@ -24,8 +24,7 @@
       display: flex; 
     }
     .lang-ja { font-family: 'Noto Sans JP', sans-serif; }
-    /* 自定义一些颜色和样式 */
-    .brand-text { color: #2563eb; } /* 品牌蓝色 */
+    .brand-text { color: #2563eb; }
     .brand-bg { background-color: #2563eb; }
     .placeholder {
       border: 2px dashed #d1d5db;
@@ -38,7 +37,7 @@
       min-height: 200px;
       width: 100%;
       border-radius: 0.5rem;
-      overflow: hidden; /* Ensure images fit */
+      overflow: hidden;
     }
     .placeholder img {
       width: 100%;
@@ -46,7 +45,7 @@
       object-fit: cover;
     }
     .text-eng {
-      color: #6b7280; /* English text color */
+      color: #6b7280;
       font-size: 0.9em;
       margin-top: 0.25rem;
     }
@@ -78,30 +77,27 @@
       <div class="flex-grow flex items-center justify-around space-x-8">
         <div class="w-1/2 text-center">
           <div class="text-2xl font-semibold mb-4"><span class="lang-ja">大企業: 「象」</span><p class="text-eng">Large Enterprises: "The Elephants"</p></div>
-          <!-- <div class="placeholder">[图片: 现代化、自动化的“大象”仓库]</div> -->
-      <img
-        src="elephant-warehouse.jpg"
-        alt="大企業现代化仓库示意／Modern automated warehouse"
-        class="mx-auto max-w-full h-auto mb-4 max-h-48 object-cover rounded-lg"
-      />
+          <img
+            src="elephant-warehouse.jpg"
+            alt="大企業现代化仓库示意／Modern automated warehouse"
+            class="mx-auto max-w-full h-auto mb-4 max-h-48 object-cover rounded-lg"
+          />
           <div class="mt-4 text-lg"><span class="lang-ja">AI予測、ロボットピッキング、データ駆動</span><p class="text-eng">AI forecasting, robotic picking, data-driven</p></div>
         </div>
         <div class="w-1/2 text-center">
           <div class="text-2xl font-semibold mb-4"><span class="lang-ja">中小企業: 「蟻」</span><p class="text-eng">SMEs: "The Ants"</p></div>
-          <!-- <div class="placeholder">[图片: 杂乱、人工的“蚂蚁”仓库]</div> -->
-      <img
-        src="ant-warehouse.jpg"
-        alt="中小企業纯手工仓库示意／Hand-made SME warehouse"
-        class="mx-auto max-w-full h-auto mb-4 max-h-48 object-cover rounded-lg"
-      />
+          <img
+            src="ant-warehouse.jpg"
+            alt="中小企業纯手工仓库示意／Hand-made SME warehouse"
+            class="mx-auto max-w-full h-auto mb-4 max-h-48 object-cover rounded-lg"
+          />
           <div class="mt-4 text-lg"><span class="lang-ja">手書き台帳、人手による探索、経験依存</span><p class="text-eng">Manual ledgers, manual searching, experience-based</p></div>
         </div>
       </div>
       <div class="text-center text-xl font-bold mt-8 text-red-600"><span class="lang-ja">巨大な格差！</span><p class="text-eng">A Massive Divide!</p></div>
     </div>
 
-    
-    <!-- Slide 3: 为什么“蚂蚁”难以跨越鸿沟？ -->
+    <!-- Slide 3: 为什么"蚂蚁"难以跨越鸿沟？ -->
     <div class="slide" data-slide="3">
       <div class="text-4xl font-bold text-center mb-6"><span class="lang-ja">なぜ「蟻」は<span class="brand-text">格差</span>を越えられないのか？</span><p class="text-eng">Why Can't "The Ants" Cross the Divide?</p></div>
       
@@ -148,184 +144,214 @@
     <div class="slide" data-slide="5">
       <div class="text-4xl font-bold text-center mb-8"><span class="lang-ja">中核となる武器：<span class="brand-text">高価なスキャナは不要</span>、あなたのスマホが効率化の神器に！</span><p class="text-eng">Core Weapon: <span class="brand-text">Forget Scanners</span>, Your Phone is Your Efficiency Tool!</p></div>
       <div class="flex-grow flex items-center justify-center">
-        <!-- <div class="placeholder w-3/4 h-3/4">[主视觉图: 一只手拿着智能手机，屏幕上是你的App，正在扫描货品二维码]</div> -->
-         <img
-  src="slide5-main-visual.png"
-  alt="一只手拿着智能手机，屏幕上展示网页项目正在扫描货品二维码／A hand holding a smartphone scanning a product QR code with a warehouse management web app"
-  class="mx-auto max-w-full h-auto mb-4 max-h-64 object-cover rounded-lg"
-/>
+        <img
+          src="slide5-main-visual.png"
+          alt="一只手拿着智能手机，屏幕上展示网页项目正在扫描货品二维码／A hand holding a smartphone scanning a product QR code with a warehouse management web app"
+          class="mx-auto max-w-full h-auto mb-4 max-h-64 object-cover rounded-lg"
+        />
       </div>
       <div class="text-center text-xl font-bold mt-4"><span class="lang-ja">革命的な理念：「ゼロハードウェアコスト」</span><p class="text-eng">Revolutionary Concept: "Zero Hardware Cost"</p></div>
     </div>
 
     <!-- Slide 6: 核心功能展示 -->
-<div class="slide" data-slide="6">
-  <div class="text-4xl font-bold text-center mb-8">
-    <span class="lang-ja">スマホ一つで、<span class="brand-text">倉庫を掌握</span></span>
-    <p class="text-eng">Warehouse in Hand, with Just a Phone</p>
-  </div>
-  <div class="flex-grow grid grid-cols-2 gap-x-8 gap-y-6 items-center">
-    <!-- 扫码入库 -->
-    <div class="text-center">
-      <img
-        src="slide6_inbound.png"
-        alt="扫描入库／Scan for Inbound"
-        class="mx-auto max-w-full h-auto max-h-40 object-cover rounded-lg"
-      />
-      <div class="text-xl font-bold mt-2">
-        <span class="lang-ja">スキャン入庫</span>
-        <p class="text-eng">Scan for Inbound</p>
+    <div class="slide" data-slide="6">
+      <div class="text-4xl font-bold text-center mb-8">
+        <span class="lang-ja">スマホ一つで、<span class="brand-text">倉庫を掌握</span></span>
+        <p class="text-eng">Warehouse in Hand, with Just a Phone</p>
       </div>
-    </div>
-    <!-- 移动盘点 -->
-    <div class="text-center">
-      <img
-        src="slide6_stocktaking.png"
-        alt="移动盘点／Mobile Stocktaking"
-        class="mx-auto max-w-full h-auto max-h-40 object-cover rounded-lg"
-      />
-      <div class="text-xl font-bold mt-2">
-        <span class="lang-ja">モバイル棚卸</span>
-        <p class="text-eng">Mobile Stocktaking</p>
-      </div>
-    </div>
-    <!-- 扫码出库 -->
-    <div class="text-center">
-      <img
-        src="slide6_outbound.png"
-        alt="扫码出库／Scan for Outbound"
-        class="mx-auto max-w-full h-auto max-h-40 object-cover rounded-lg"
-      />
-      <div class="text-xl font-bold mt-2">
-        <span class="lang-ja">スキャン出庫</span>
-        <p class="text-eng">Scan for Outbound</p>
-      </div>
-    </div>
-    <!-- 随时查询 -->
-    <div class="text-center">
-      <img
-        src="slide6_inquiry.png"
-        alt="实时查询／Real-time Inquiry"
-        class="mx-auto max-w-full h-auto max-h-40 object-cover rounded-lg"
-      />
-      <div class="text-xl font-bold mt-2">
-        <span class="lang-ja">いつでも在庫照会</span>
-        <p class="text-eng">Real-time Inquiry</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-   <!-- Slide 7: 核心亮点 -->
-<div class="slide" data-slide="7">
-  <div class="text-4xl font-bold text-center mb-8">
-    <span class="lang-ja">ユニークな<span class="brand-text">コア機能</span></span>
-    <p class="text-eng">Unique Core Features</p>
-  </div>
-  <div class="flex-grow flex items-center justify-around space-x-8">
-    <!-- 左侧：Custom Label Design（保持不变） -->
-    <div class="w-1/2 text-center">
-      <div class="text-2xl font-semibold mb-4">
-        <span class="lang-ja">カスタムラベルデザイン</span>
-        <p class="text-eng">Custom Label Design</p>
-      </div>
-      <div class="placeholder">
-        <img
-          src="slide7_custom_label.png"
-          alt="可视化标签编辑器界面／Visual Label Design Editor"
-          class="mx-auto max-w-full h-auto"
-        />
-      </div>
-      <div class="mt-4 text-lg">
-        <span class="lang-ja">商品ごとにユニークなラベルを自由にデザイン。ドラッグ＆ドロップで簡単操作。</span>
-        <p class="text-eng">Freely design unique labels for each product. Simple drag-and-drop interface.</p>
+      <div class="flex-grow grid grid-cols-2 gap-x-8 gap-y-6 items-center">
+        <div class="text-center">
+          <img
+            src="slide6_inbound.png"
+            alt="扫描入库／Scan for Inbound"
+            class="mx-auto max-w-full h-auto max-h-40 object-cover rounded-lg"
+          />
+          <div class="text-xl font-bold mt-2">
+            <span class="lang-ja">スキャン入庫</span>
+            <p class="text-eng">Scan for Inbound</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <img
+            src="slide6_stocktaking.png"
+            alt="移动盘点／Mobile Stocktaking"
+            class="mx-auto max-w-full h-auto max-h-40 object-cover rounded-lg"
+          />
+          <div class="text-xl font-bold mt-2">
+            <span class="lang-ja">モバイル棚卸</span>
+            <p class="text-eng">Mobile Stocktaking</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <img
+            src="slide6_outbound.png"
+            alt="扫码出库／Scan for Outbound"
+            class="mx-auto max-w-full h-auto max-h-40 object-cover rounded-lg"
+          />
+          <div class="text-xl font-bold mt-2">
+            <span class="lang-ja">スキャン出庫</span>
+            <p class="text-eng">Scan for Outbound</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <img
+            src="slide6_inquiry.png"
+            alt="实时查询／Real-time Inquiry"
+            class="mx-auto max-w-full h-auto max-h-40 object-cover rounded-lg"
+          />
+          <div class="text-xl font-bold mt-2">
+            <span class="lang-ja">いつでも在庫照会</span>
+            <p class="text-eng">Real-time Inquiry</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- 右侧：AI-Powered Smart Analytics（调整后） -->
-    <div class="w-1/2 text-center">
-      <div class="text-2xl font-semibold mb-4">
-        <span class="lang-ja">AIによるスマート分析</span>
-        <p class="text-eng">AI-Powered Smart Analytics</p>
+    <!-- Slide 7: 核心亮点 -->
+    <div class="slide" data-slide="7">
+      <div class="text-4xl font-bold text-center mb-8">
+        <span class="lang-ja">ユニークな<span class="brand-text">コア機能</span></span>
+        <p class="text-eng">Unique Core Features</p>
       </div>
-      <div class="placeholder">
-        <img
-          src="slide7_ai_analytics.png"
-          alt="AI分析仪表盘，包含图表和建议／AI analytics dashboard with charts and recommendations"
-          class="mx-auto max-w-full h-auto"
-        />
-      </div>
-      <div class="mt-4 text-lg">
-        <span class="lang-ja">AIが販売データを分析し、「人気商品」や「滞留在庫」を特定。ビジネス判断をサポート。</span>
-        <p class="text-eng">AI analyzes sales data to identify "hot sellers" and "slow-moving stock" to support business decisions.</p>
+      <div class="flex-grow flex items-center justify-around space-x-8">
+        <div class="w-1/2 text-center">
+          <div class="text-2xl font-semibold mb-4">
+            <span class="lang-ja">カスタムラベルデザイン</span>
+            <p class="text-eng">Custom Label Design</p>
+          </div>
+          <div class="placeholder">
+            <img
+              src="slide7_custom_label.png"
+              alt="可视化标签编辑器界面／Visual Label Design Editor"
+              class="mx-auto max-w-full h-auto"
+            />
+          </div>
+          <div class="mt-4 text-lg">
+            <span class="lang-ja">商品ごとにユニークなラベルを自由にデザイン。ドラッグ＆ドロップで簡単操作。</span>
+            <p class="text-eng">Freely design unique labels for each product. Simple drag-and-drop interface.</p>
+          </div>
+        </div>
+        <div class="w-1/2 text-center">
+          <div class="text-2xl font-semibold mb-4">
+            <span class="lang-ja">AIによるスマート分析</span>
+            <p class="text-eng">AI-Powered Smart Analytics</p>
+          </div>
+          <div class="placeholder">
+            <img
+              src="slide7_ai_analytics.png"
+              alt="AI分析仪表盘，包含图表和建议／AI analytics dashboard with charts and recommendations"
+              class="mx-auto max-w-full h-auto"
+            />
+          </div>
+          <div class="mt-4 text-lg">
+            <span class="lang-ja">AIが販売データを分析し、「人気商品」や「滞留在庫」を特定。ビジネス判断をサポート。</span>
+            <p class="text-eng">AI analyzes sales data to identify "hot sellers" and "slow-moving stock" to support business decisions.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-    <!-- NEW Slide 8: 学术创新性 I -->
+
+    <!-- Slide 8: オンライン増分学習 -->
     <div class="slide" data-slide="8">
-      <div class="text-4xl font-bold text-center mb-8"><span class="lang-ja">学術的・産業的<span class="brand-text">革新性 I</span></span><p class="text-eng">Academic & Industrial Innovations I</p></div>
-      <div class="flex-grow flex items-center justify-center space-x-8">
-          <div class="w-1/2 bg-gray-50 p-6 rounded-lg shadow-md h-full">
-              <h3 class="text-2xl font-bold mb-4"><span class="lang-ja">ゼロコスト・モバイル端末活用</span><p class="text-eng">Zero-Cost Mobile-as-Terminal</p></h3>
-              <p class="text-lg text-gray-700"><span class="lang-ja">高価な業務用端末の代わりにスマートフォンを活用することで、中小企業の導入障壁を劇的に下げます。これは、資源制約のある環境における「軽量システム」設計原則や、「エッジコンピューティング」とクラウドの連携という最新の研究トレンドにも合致します。</span></p>
-              <p class="text-eng mt-2 text-gray-600">This dramatically lowers the entry barrier for SMEs by leveraging smartphones instead of costly industrial terminals. It aligns with the "lightweight systems" design principle for resource-constrained environments and contributes to the research trend of edge computing and cloud synergy.</p>
-          </div>
-          <div class="w-1/2 bg-gray-50 p-6 rounded-lg shadow-md h-full">
-              <h3 class="text-2xl font-bold mb-4"><span class="lang-ja">中小企業向けAIの民主化</span><p class="text-eng">Democratizing AI for SMEs</p></h3>
-              <p class="text-lg text-gray-700"><span class="lang-ja">従来、大企業の特権であった高度なAI/MLモデル（需要予測、欠品警告など）を、ITインフラが不十分な中小企業でも利用可能にします。これにより、「中小企業のためのAI」という重要な学術的空白を埋めることを目指します。</span></p>
-              <p class="text-eng mt-2 text-gray-600">We aim to fill a significant academic gap—"AI for SMEs"—by making advanced AI/ML models (for demand forecasting, stockout alerts, etc.), traditionally exclusive to large corporations, accessible to SMEs with limited IT infrastructure.</p>
-          </div>
+      <div class="text-4xl font-bold text-center mb-8"><span class="lang-ja">オンライン増分学習</span><p class="text-eng">Online Incremental Learning</p></div>
+      <div class="flex-grow flex items-center justify-center space-x-6 text-left">
+        <div class="w-1/2 bg-gray-50 p-6 rounded-lg shadow-md h-full">
+          <h3 class="text-2xl font-bold mb-4 lang-ja">毎日のモデル更新<p class="text-eng">Daily Model Updates</p></h3>
+          <ul class="list-disc list-inside space-y-4 text-lg">
+            <li><span class="lang-ja">新規データ到着時のみ重み更新、フル再学習不要。</span><p class="text-eng text-gray-600">Updates weights only on new data—no full retraining required.</p></li>
+            <li><span class="lang-ja">数秒で完了し、業務を中断しない。</span><p class="text-eng text-gray-600">Completes in seconds without interrupting operations.</p></li>
+            <li><span class="lang-ja">高頻度小サンプル更新下での精度と収束性を評価。</span><p class="text-eng text-gray-600">Evaluates accuracy & convergence under high-frequency, small-sample updates.</p></li>
+          </ul>
+        </div>
+        <div class="w-1/2 bg-gray-50 p-6 rounded-lg shadow-md h-full">
+          <h3 class="text-2xl font-bold mb-4 lang-ja">意思決定支援<p class="text-eng">Decision Support</p></h3>
+          <ul class="list-disc list-inside space-y-4 text-lg">
+            <li><span class="lang-ja">REST APIで即時予測を返却、App／ダッシュボードで即日活用。</span><p class="text-eng text-gray-600">Returns real-time forecasts via REST API for same-day use in apps/dashboards.</p></li>
+            <li><span class="lang-ja">生産計画や発注タイミングを柔軟に調整可能。</span><p class="text-eng text-gray-600">Enables flexible adjustment of production schedules and ordering.</p></li>
+          </ul>
+        </div>
       </div>
-  </div>
-
-   <!-- NEW Slide 9: 学术创新性 II -->
-   <div class="slide" data-slide="9">
-    <div class="text-4xl font-bold text-center mb-8"><span class="lang-ja">学術的・産業的<span class="brand-text">革新性 II</span></span><p class="text-eng">Academic & Industrial Innovations II</p></div>
-    <div class="flex-grow flex items-center justify-center space-x-8">
-        <div class="w-1/2 bg-gray-50 p-6 rounded-lg shadow-md h-full">
-            <h3 class="text-2xl font-bold mb-4"><span class="lang-ja">アジャイルなデータループ</span><p class="text-eng">Agile Data Feedback Loop</p></h3>
-            <p class="text-lg text-gray-700"><span class="lang-ja">中小企業は、大企業と異なり、市場の変化に迅速に対応できる柔軟性を持っています。「モバイル＋クラウド＋AI」の連携は、リアルタイムのデータに基づいた迅速な生産・在庫調整を可能にし、「アジャイル生産」や「リアルタイム最適化」の理論を実践するユニークな機会を提供します。</span></p>
-            <p class="text-eng mt-2 text-gray-600">Unlike large corporations, SMEs can adapt quickly. Our "Mobile + Cloud + AI" synergy creates a real-time data feedback loop, enabling rapid production and inventory adjustments. This provides a unique opportunity to apply academic theories of "agile manufacturing" and "real-time optimization" in practice.</p>
-        </div>
-        <div class="w-1/2 bg-gray-50 p-6 rounded-lg shadow-md h-full">
-            <h3 class="text-2xl font-bold mb-4"><span class="lang-ja">モジュール式アーキテクチャ</span><p class="text-eng">Modular Architecture</p></h3>
-            <p class="text-lg text-gray-700"><span class="lang-ja">フロントエンド、バックエンド、AIサービスを分離したマイクロサービス設計は、現代のソフトウェア工学のベストプラクティスです。これにより、将来的にサプライチェーン連携や動的価格設定といった新しい機能を、プラグインのように簡単に追加・検証するための堅牢な研究基盤を構築します。</span></p>
-            <p class="text-eng mt-2 text-gray-600">Our decoupled microservices architecture follows modern software engineering best practices. This creates a robust research platform for the future, allowing new functionalities like supply chain collaboration or dynamic pricing to be integrated and tested as plug-and-play modules.</p>
-        </div>
     </div>
-</div>
 
-   <!-- Slide 8: 技术支撑 -->
-<div class="slide" data-slide="9">
-  <div class="text-4xl font-bold text-center mb-8">
-    <span class="lang-ja">
-      手軽さの裏側：<span class="brand-text">信頼性の高い技術サポート</span>
-    </span>
-    <p class="text-eng">
-      Behind the Simplicity: Reliable Technology
-    </p>
-  </div>
-  <div class="flex-grow flex items-center justify-center">
-    <!-- 替换下面这行 -->
-    <img
-      src="slide9_tech_stack.png"
-      alt="技术架构图：Frontend → Backend → AI Service／Tech stack: Frontend → Backend → AI Service"
-      class="mx-auto max-w-full h-auto"
-    />
-  </div>
-  <div class="text-center text-lg mt-4">
-    <span class="lang-ja">
-      モバイルでの快適な体験を実現するための技術的最適化（スキャンアルゴリズム、クラウド同期など）
-    </span>
-    <p class="text-eng">
-      Technical optimizations for a smooth mobile experience (e.g., scanning algorithms, cloud sync)
-    </p>
-  </div>
-</div>
-
- <!-- NEW Slide 9: データが語る -->
+    <!-- Slide 9: 説明可能AI -->
     <div class="slide" data-slide="9">
+      <div class="text-4xl font-bold text-center mb-8"><span class="lang-ja">説明可能AI</span><p class="text-eng">Explainable AI (XAI)</p></div>
+      <div class="flex-grow flex items-center justify-center space-x-6 text-left">
+        <div class="w-1/2 bg-gray-50 p-6 rounded-lg shadow-md h-full">
+          <h3 class="text-2xl font-bold mb-4 lang-ja">Attention/SHAP可視化<p class="text-eng">Attention & SHAP Visualization</p></h3>
+          <ul class="list-disc list-inside space-y-4 text-lg">
+            <li><span class="lang-ja">予測に寄与する上位3要因をバーグラフで表示。</span><p class="text-eng text-gray-600">Displays top-3 driving factors in bar charts.</p></li>
+            <li><span class="lang-ja">一目で理解できるダッシュボードを提供。</span><p class="text-eng text-gray-600">Provides intuitive dashboards for immediate insight.</p></li>
+          </ul>
+        </div>
+        <div class="w-1/2 bg-gray-50 p-6 rounded-lg shadow-md h-full">
+          <h3 class="text-2xl font-bold mb-4 lang-ja">信頼性と透明性の向上<p class="text-eng">Enhanced Trust & Transparency</p></h3>
+          <ul class="list-disc list-inside space-y-4 text-lg">
+            <li><span class="lang-ja">意思決定者の理解度を高め、AI予測への信頼を醸成。</span><p class="text-eng text-gray-600">Boosts stakeholder understanding and trust in AI forecasts.</p></li>
+            <li><span class="lang-ja">次の更新後も要因の一貫性を追跡可能。</span><p class="text-eng text-gray-600">Allows tracking of factor consistency across updates.</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 10: 主な参考文献 -->
+    <div class="slide" data-slide="10">
+      <div class="text-4xl font-bold text-center mb-8"><span class="lang-ja">主な<span class="brand-text">参考文献</span></span><p class="text-eng">Key References</p></div>
+      <div class="flex-grow grid grid-cols-2 gap-x-8 gap-y-6 text-sm">
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <p class="font-bold">1. A Survey on Concept Drift Adaptation (2014)</p>
+          <p class="text-gray-600">Gama, J., et al. ACM Computing Surveys.</p>
+          <a href="https://dl.acm.org/doi/10.1145/2523813" target="_blank" class="text-blue-600 hover:underline">DOI Link</a>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <p class="font-bold">2. Ensemble Learning for Data Stream Analysis (2017)</p>
+          <p class="text-gray-600">Krawczyk, B., et al. Information Fusion.</p>
+          <a href="https://doi.org/10.1016/j.inffus.2017.02.004" target="_blank" class="text-blue-600 hover:underline">DOI Link</a>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <p class="font-bold">3. A Dual-Stage Attention-Based RNN for Time Series Prediction (2017)</p>
+          <p class="text-gray-600">Qin, Y., et al. IJCAI.</p>
+          <a href="https://www.ijcai.org/proceedings/2017/0366.pdf" target="_blank" class="text-blue-600 hover:underline">PDF Link</a>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <p class="font-bold">4. A Unified Approach to Interpreting Model Predictions (2017)</p>
+          <p class="text-gray-600">Lundberg, S. M. & Lee, S.-I. NeurIPS (SHAP).</p>
+          <a href="https://arxiv.org/abs/1705.07874" target="_blank" class="text-blue-600 hover:underline">arXiv Link</a>
+        </div>
+                 <div class="bg-gray-50 p-4 rounded-lg">
+           <p class="font-bold">5. DA-LSTM: A Dynamic Drift-Adaptive Learning Framework for Interval Load Forecasting with LSTM Networks (2023)</p>
+           <p class="text-gray-600">Bayram, F., Aupke, P., Ahmed, B. S., Kassler, A., Theocharis, A., & Forsman, J. arXiv preprint arXiv:2305.08767.</p>
+           <a href="https://arxiv.org/abs/2305.08767" target="_blank" class="text-blue-600 hover:underline">arXiv Link</a>
+         </div>
+         <div class="bg-gray-50 p-4 rounded-lg">
+           <p class="font-bold">6. Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting (2019)</p>
+           <p class="text-gray-600">Lim, B., Arık, S. O., Loeff, N., & Pfister, T. arXiv preprint arXiv:1912.09363.</p>
+           <a href="https://arxiv.org/abs/1912.09363" target="_blank" class="text-blue-600 hover:underline">arXiv Link</a>
+         </div>
+      </div>
+    </div>
+
+    <!-- Slide 11: 技术支撑 -->
+    <div class="slide" data-slide="11">
+      <div class="text-4xl font-bold text-center mb-8">
+        <span class="lang-ja">手軽さの裏側：<span class="brand-text">信頼性の高い技術サポート</span></span>
+        <p class="text-eng">Behind the Simplicity: Reliable Technology</p>
+      </div>
+      <div class="flex-grow flex items-center justify-center">
+        <img
+          src="slide9_tech_stack.png"
+          alt="技术架构图：Frontend → Backend → AI Service／Tech stack: Frontend → Backend → AI Service"
+          class="mx-auto max-w-full h-auto max-h-96 object-cover rounded-lg"
+        />
+      </div>
+      <div class="text-center text-lg mt-4">
+        <span class="lang-ja">モバイルでの快適な体験を実現するための技術的最適化（スキャンアルゴリズム、クラウド同期など）</span>
+        <p class="text-eng">Technical optimizations for a smooth mobile experience (e.g., scanning algorithms, cloud sync)</p>
+      </div>
+    </div>
+
+    <!-- Slide 12: データが語る -->
+    <div class="slide" data-slide="12">
       <div class="text-4xl font-bold text-center mb-6">
         <span class="lang-ja">データが語る：<span class="brand-text">期待される成果</span></span>
         <p class="text-eng">Data Speaks: Expected Outcomes</p>
@@ -335,7 +361,6 @@
         <p class="text-eng">The effectiveness of our solution is supported by industry research and studies.</p>
       </div>
       <div class="flex-grow flex items-start justify-around text-left space-x-6">
-        <!-- Column 1: Cost Reduction -->
         <div class="w-1/3 bg-gray-50 p-6 rounded-lg shadow-md h-full">
           <h3 class="text-2xl font-bold mb-4 text-green-700">
             <span class="lang-ja">コスト削減</span><p class="text-eng">Cost Reduction</p>
@@ -351,7 +376,6 @@
             </li>
           </ul>
         </div>
-        <!-- Column 2: Efficiency Gains -->
         <div class="w-1/3 bg-gray-50 p-6 rounded-lg shadow-md h-full">
           <h3 class="text-2xl font-bold mb-4 text-blue-700">
             <span class="lang-ja">効率と売上の向上</span><p class="text-eng">Efficiency & Sales Boost</p>
@@ -368,14 +392,13 @@
             <li class="flex items-start">
               <span class="text-blue-500 mr-3 mt-1">✔</span>
               <div>
-                <strong class="lang-ja">在庫回転率18%向上</strong>
-                <p class="text-eng text-sm">18% improvement in inventory turnover.</p>
+                <strong class="lang-ja">在庫回転率20%向上</strong>
+                <p class="text-eng text-sm">20% improvement in inventory turnover.</p>
                 <p class="text-xs text-gray-400 mt-1">(European Economic Letters)</p>
               </div>
             </li>
           </ul>
         </div>
-        <!-- Column 3: Accuracy & Service -->
         <div class="w-1/3 bg-gray-50 p-6 rounded-lg shadow-md h-full">
           <h3 class="text-2xl font-bold mb-4 text-purple-700">
             <span class="lang-ja">予測精度とサービス</span><p class="text-eng">Accuracy & Service</p>
@@ -392,8 +415,8 @@
             <li class="flex items-start">
               <span class="text-purple-500 mr-3 mt-1">✔</span>
               <div>
-                <strong class="lang-ja">欠品率28%改善</strong>
-                <p class="text-eng text-sm">28% improvement in stockout rates.</p>
+                <strong class="lang-ja">欠品率30%改善</strong>
+                <p class="text-eng text-sm">30% improvement in stockout rates.</p>
                 <p class="text-xs text-gray-400 mt-1">(European Economic Letters)</p>
               </div>
             </li>
@@ -402,31 +425,30 @@
       </div>
     </div>
 
-    <!-- Slide 10: 我们的愿景 -->
-    <div class="slide" data-slide="11">
+    <!-- Slide 13: 我们的愿景 -->
+    <div class="slide" data-slide="13">
       <div class="text-4xl font-bold text-center mb-8"><span class="lang-ja">私たちのビジョン：「一つの武器」から<span class="brand-text">「エコシステム」</span>へ</span><p class="text-eng">Our Vision: From a "Single Weapon" to an "Ecosystem"</p></div>
       <div class="flex-grow flex items-center justify-center">
-        <!-- <div class="placeholder w-3/4 h-3/4">[Roadmap或生态系统图]</div> -->
-         <img
-  src="slide11_roadmap.png"
-  alt="短期: 機能改善／Feature Enhancement, 中期: データ連携／Data Integration, 長期: サプライチェーンのデータハブへ／Become a Supply Chain Data Hub"
-  class="mx-auto max-w-full h-auto"
-/>
+        <img
+          src="slide11_roadmap.png"
+          alt="短期: 機能改善／Feature Enhancement, 中期: データ連携／Data Integration, 長期: サプライチェーンのデータハブへ／Become a Supply Chain Data Hub"
+          class="mx-auto max-w-full h-auto max-h-[600px] object-cover rounded-lg"
+        />
       </div>
-      <div class="text-center text-lg mt-4"><span class="lang-ja">短期: 機能改善 → 中期: データ連携 → 長期: サプライチェーンのデータハブへ</span><p class="text-eng">Short-term: Enhance Features → Mid-term: Data Integration → Long-term: Become a Supply Chain Data Hub</p></div>
+      <div class="text-center text-lg mt-1"><span class="lang-ja">短期: 機能改善 → 中期: データ連携 → 長期: サプライチェーンのデータハブへ</span><p class="text-eng">Short-term: Enhance Features → Mid-term: Data Integration → Long-term: Become a Supply Chain Data Hub</p></div>
     </div>
 
-    <!-- Slide 11: Q&A -->
-    <div class="slide justify-center items-center text-center bg-gray-800 text-white" data-slide="12">
+    <!-- Slide 14: Q&A -->
+    <div class="slide justify-center items-center text-center bg-gray-800 text-white" data-slide="14">
       <h2 class="text-6xl font-bold">Q & A</h2>
       <p class="mt-4 text-2xl lang-ja">質疑応答</p>
     </div>
 
-    <!-- Slide 12: 感谢页 -->
-    <div class="slide justify-center items-center text-center bg-gray-800 text-white" data-slide="13">
+    <!-- Slide 15: 感谢页 -->
+    <div class="slide justify-center items-center text-center bg-gray-800 text-white" data-slide="15">
       <h2 class="text-5xl font-bold lang-ja">ご清聴ありがとうございました</h2>
       <p class="text-eng text-2xl mt-2">Thank you for your attention</p>
-      <div class="text-xl mt-8 opacity-80"><span class="lang-ja">連絡先：cli@iplab.cs.tsukuba.ac.jp</span> / <span class="text-eng">Contact:cli@iplab.cs.tsukuba.ac.jpcli@iplab.cs.tsukuba.ac.jp</span></div>
+      <div class="text-xl mt-8 opacity-80"><span class="lang-ja">連絡先：cli@iplab.cs.tsukuba.ac.jp</span> / <span class="text-eng">Contact: cli@iplab.cs.tsukuba.ac.jp</span></div>
     </div>
 
   </div>
@@ -436,7 +458,7 @@
     <button id="prevBtn" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
       ←
     </button>
-    <span id="slide-counter" class="text-gray-700 font-semibold text-lg">1 / 13</span>
+    <span id="slide-counter" class="text-gray-700 font-semibold text-lg">1 / 15</span>
     <button id="nextBtn" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-lg transition-colors">
       →
     </button>
@@ -451,23 +473,18 @@
     const totalSlides = slides.length;
 
     function showSlide(index) {
-      // 隐藏所有幻灯片
       slides.forEach(slide => {
         slide.classList.remove('active');
       });
       
-      // 显示当前索引的幻灯片
       slides[index].classList.add('active');
       
-      // 更新计数器
       counter.textContent = `${index + 1} / ${totalSlides}`;
       
-      // 更新按钮状态
       prevBtn.disabled = index === 0;
       nextBtn.disabled = index === totalSlides - 1;
     }
 
-    // 按钮点击事件
     prevBtn.addEventListener('click', () => {
       if (currentSlideIndex > 0) {
         currentSlideIndex--;
@@ -482,7 +499,6 @@
       }
     });
 
-    // 键盘左右箭头事件
     document.addEventListener('keydown', e => {
       if (e.key === 'ArrowLeft') {
         prevBtn.click();
@@ -491,7 +507,6 @@
       }
     });
 
-    // 初始显示第一张幻灯片
     showSlide(currentSlideIndex);
   </script>
 
